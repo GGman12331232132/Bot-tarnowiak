@@ -18,7 +18,9 @@ jobs:
           python-version: 3.11
 
       - name: Install dependencies
-        run: pip install beautifulsoup4 requests pytz
+        run: pip install -r requirements.txt
 
       - name: Run bot
         run: python bot.py
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
