@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -19,7 +18,7 @@ jobs:
           python-version: 3.11
 
       - name: Install dependencies
-        run: pip install beautifulsoup4 requests  # dodaj wszystkie potrzebne pakiety
+        run: pip install beautifulsoup4 requests pytz
 
       - name: Run bot
         run: python bot.py
