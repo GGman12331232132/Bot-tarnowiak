@@ -16,4 +16,4 @@ jobs:
       - name: Run program
         run: |
           echo "Start"
-          python main.py
+          python bot.py
